@@ -1,7 +1,7 @@
 resource
 "azurerm_resource_group"
-"terraformmay022025"{
+"onomemay022025"{
   name =
-  "mcit_resource_group_may022025"
+  "onomemcit_resource_group"
   location="canadacentral"
 }
