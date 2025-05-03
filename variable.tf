@@ -4,7 +4,7 @@ variable "subscription_id"{
 variable "client_id"{
   type=string
   }
-Variable"client_secret"{
+variable "client_secret"{
   type=string
   }
 variable "tenant_id"{
