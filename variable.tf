@@ -10,8 +10,7 @@ variable "client_secret"{
 variable "tenant_id"{
   type=string
   }
-variable "onomestoragemay"
-{ 
+variable "onomestoragemay"{ 
 type=string
 default="myfilestorsgeaccount"
 }
