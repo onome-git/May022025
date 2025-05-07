@@ -1,5 +1,5 @@
-local{
-  servicename="myexample"
-  forum="myexamplemcit"
-  lengthsa=length(local.myexample)
+locals{
+  servicename="abracadabra"
+  forum="abracadabramcit"
+  lengthsa=length(local.servicename)
 }
