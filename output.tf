@@ -5,6 +5,6 @@ output "secondprint"{
     value = local.forum
 }
  
-output "lengthsa"{
+output "lengths"{
     value=local.lengths
 }
