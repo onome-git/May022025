@@ -11,6 +11,8 @@ output "lengthsa"{
 
 output "wintersportslist"{
     value=[for sport in local.winterlistOfSports:sport]
+    value=[for sport in local.winterlistOfSports:sport]
+
 }
 
 output "character_enemy_output" {
