@@ -17,5 +17,5 @@ output "character_enemy_output" {
   value = local.character_enemy_map
 }
 output "top5restaurant_output" {
-  value = [for local.top5restaurant_food_map
+  value = local.character_food_map
 }
