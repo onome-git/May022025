@@ -10,7 +10,7 @@ character_enemy_map =   { for character in local.characters: # Convert character
 }
 top5restaurants= ["macdonald","timhorton","kingburger","subway","kfc"]
 food = ["fish","fries","tea","salad","pizza"]
-character_food_map =   { for character in local.top5restaurant: # Convert character list to a set
+character_food_map =   { for character in local.top5restaurants: # Convert character list to a set
       character => local.food
 }
 }
