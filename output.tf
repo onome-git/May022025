@@ -16,3 +16,6 @@ output "wintersportslist"{
 output "character_enemy_output" {
   value = local.character_enemy_map
 }
+output "top5restaurant_output" {
+  value = [for local.top5restauarant_food_map
+}
