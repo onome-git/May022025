@@ -14,12 +14,14 @@ character_food_map =   { for character in local.top5restaurants: # Convert chara
       character => local.food
 }
 variable "sum_numbers" {
-  type        = list(string)
- default  = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
+  type    = list(string)
+  default = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
+
 }
 
-output "sum_numbers" {
-  value = sum([for total in local_numbers  : tonumber(total)])
+output "total_sum" {
+  value = sum([for n in var.sum_numbers : tonumber(n)])
+
 }
 
 }
