@@ -18,8 +18,6 @@ variable "sum_numbers" {
   default = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
 }
 
-}
-
 output "total_sum" {
   value = sum([for n in var.sum_numbers : tonumber(n)])
 
