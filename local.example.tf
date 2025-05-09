@@ -18,8 +18,8 @@ variable "numbers" {
   sum    = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
 }
 
-output "sum_of_numbers" {
-  value = sum(for n in var.numbers : tonumber(n))
+output "sum_numbers" {
+  value = sum([for total in local_numbers  : tonumber(total)])
 }
 
 }
