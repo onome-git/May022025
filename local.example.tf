@@ -13,11 +13,9 @@ food = ["fish","fries","tea","salad","pizza"]
 character_food_map =   { for character in local.top5restaurants: # Convert character list to a set
       character => local.food
 }
-variable "sentence" {
-  type        = stringvariable "sentence" 
-  type        = (["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"])--->sum
+sum_number= (["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"])
 }
-  description = "A sentence to convert to uppercase"
-}
+ 
+
 
 
