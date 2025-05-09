@@ -19,7 +19,7 @@ variable "numbers" {
 }
 
 output "sum_of_numbers" {
-  value = sum([for n in var.numbers : tonumber(n)])
+  value = sum(for n in var.numbers : tonumber(n))
 }
 
 }
