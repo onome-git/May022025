@@ -20,6 +20,7 @@ output "character_enemy_output" {
 output "top5restaurants_output" {
   value = local.character_food_map
 }
-output "sum_of_numbers" {
-  value = sum([character in local.numbers : tonumber])
+
+output "uppercased_sentence" {
+  value = upper([var.sentence: tonumber])
 }
