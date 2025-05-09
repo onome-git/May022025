@@ -13,5 +13,6 @@ food = ["fish","fries","tea","salad","pizza"]
 character_food_map =   { for character in local.top5restaurants: # Convert character list to a set
       character => local.food
 }
+top5restaurants= zipmap["macdonald","timhorton","kingburger","subway","kfc"]
 }
 
