@@ -13,7 +13,15 @@ food = ["fish","fries","tea","salad","pizza"]
 character_food_map =   { for character in local.top5restaurants: # Convert character list to a set
       character => local.food
 }
-sum_number= (["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"])
+variable "numbers" {
+  type        = list(string)
+  sum    = ["42", "77", "13", "98", "3", "64", "55", "27", "89", "6"]
+}
+
+output "sum_of_numbers" {
+  value = sum([for n in var.numbers : tonumber(n)])
+}
+
 }
  
 
