@@ -21,6 +21,6 @@ output "top5restaurants_output" {
   value = local.character_food_map
 }
 
-output "uppercased_sentence" {
-  value = upper([var.sentence: tonumber])
+output "sum_number" {
+  value = sum([for sum in sumlocal.sum_numbere: tonumber])
 }
