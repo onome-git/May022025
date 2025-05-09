@@ -14,11 +14,6 @@ character_food_map =   { for character in local.top5restaurants: # Convert chara
       character => local.food
 }
 
-output "total_sum" {
-  value = sum([for n in var.sum_numbers : tonumber(n)])
-
-}
-
 }
  
 
