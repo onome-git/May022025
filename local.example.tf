@@ -14,7 +14,7 @@ character_food_map =   { for character in local.top5restaurants: # Convert chara
       character => local.food
 }
 
-}
+
  
 
 
