@@ -9,12 +9,12 @@ locals{
       character => local.enemies_destroyed
 }
   
-  restaurant_food_map = {for food in local.top5_restaurants: # Convert restaurant list to a set
-      restauarant => local.top5_food
+  restaurants_food_map = {for food in local.top5_restaurants: # Convert restaurants list to a set
+      restaurants => local.top5_food
 
   top5_restaurants = ["macdonald", "timhorton", "kingburger", "subway", "kfc"]
   top5_food = ["fish", "fries", "tea", "salad", "pizza"]
- restaurant_food_map_zip = zipmap(local.top5_restaurants, local.top5_foods)
+ restaurants_food_map_zip = zipmap(local.top5_restaurants, local.top5_foods)
 }
 }
 
