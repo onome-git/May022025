@@ -13,7 +13,7 @@ locals{
       restauarant => local.food
 
   top5restaurants = ["macdonald", "timhorton", "kingburger", "subway", "kfc"]
-  food            = ["fish", "fries",      "tea",        "salad",  "pizza"]
+  food            = ["fish", "fries", "tea", "salad", "pizza"]
   restaurant_food_map = zipmap(local.top5restaurants, local.food)
  
 }
