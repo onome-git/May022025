@@ -17,7 +17,7 @@ locals{
  restaurants_food_map_zip = zipmap(local.top5_restaurants, local.top5_food)
 
 }
-
+original_text ="IAM A STUDENT AT MCIT"
 lower_text = lower(local.original_text)
 }
  
