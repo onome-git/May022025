@@ -17,9 +17,9 @@ locals{
  restaurants_food_map_zip = zipmap(local.top5_restaurants, local.top5_food)
 
   }
-  string_numbers - ["42","77", "13", "98", "3","64","55","27","89","6"]
+  string_numbers = ["42","77", "13", "98", "3","64","55","27","89","6"]
   # convert strings to numbers and sum
-  number_sum = sum([for n i local.string_numbers : tonumber(n)])
+  number_sum = sum([for n in local.string_numbers : tonumber(n)])
   original_text = "I AM A STUDENT AT MCIT"
   lower_text = lower(local.original_text)
   }
