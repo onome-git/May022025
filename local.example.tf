@@ -18,7 +18,8 @@ locals{
 
 }
 
-
+lower_text=lower(local.original.text)
+}
  
 
 
