@@ -23,7 +23,7 @@ type=string
 description ="A sentence to convert to uppercase"
 default="hello class"
 }
-variable "full_text {
+variable "full_text" {
 type=string
-default="i love the country called canada, it is awesome"
+default= "i love the country called canada, it is awesome"
 }
