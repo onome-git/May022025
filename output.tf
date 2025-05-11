@@ -21,7 +21,15 @@ output "top5restaurants_output" {
   value = local.character_food_map
 }
 
-output "sum_of_numbers" {
-  value = sum([for n in var.numbers : tonumber(n)])
+output "uppercased_sentence"{
+value= upper(var.sentence)
 }
-
+output "list_of_numbers" {
+value = local.lower_text
+}
+output "lowercased_sentence" {
+value = local.lower_text
+}
+output "extract_canada"{
+value = substr(var.full_text, 26, 6)
+}
