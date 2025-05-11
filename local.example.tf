@@ -15,7 +15,7 @@ locals{
   top5_restaurants = ["macdonald","timhorton","kingburger","subway","kfc"] 
   top5_food = ["fish","fries","tea","salad","pizza"]
  restaurants_food_map_zip = zipmap(local.top5_restaurants, local.top5_foods)
-}
+
 }
 
 
