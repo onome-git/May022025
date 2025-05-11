@@ -18,7 +18,7 @@ locals{
 
 }
 
-lower_text=lower(local.original.text)
+lower_text = lower(local.original_text)
 }
  
 
