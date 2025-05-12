@@ -25,6 +25,7 @@ output "top5_restaurants_output" {
 
 output "uppercased_sentence"{
 value= upper(var.sentence)
+}
 
 }
 output "list_of_numbers" {
