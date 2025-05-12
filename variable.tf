@@ -31,12 +31,7 @@ variable "my_text" {
 type=string
 default = "my name is onome"
 }
-
-variable "sentence" {
-  type        = string
-  description = "A sentence to convert to uppercase"
-}
-variable "trimword" {
   type    = string
   default = "  I love Terraform  "
 }
+
