@@ -24,7 +24,7 @@ locals {
   original_text = "I AM A STUDENT AT MCIT"
   lower_text    = lower(local.original_text)
 }
-locals {
+
   quote           = "Montreal: Where potholes have their own zip code."
   upper_quote     = upper(local.quote)
   lower_quote     = lower(local.quote)
@@ -36,5 +36,4 @@ locals {
   words           = split(" ", local.quote)
   quote_length    = length(local.quote)
   branded_quote   = "${local.quote} - City of Surprises"
-}
 }
