@@ -40,6 +40,6 @@ output "extract_onome"{
 value = substr(var.my_text, 11, 5)
 }
 
-output "trimmed_sentence" {
+output "trimmed_word" {
   value = trim(var.sentence)
 }
