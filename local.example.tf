@@ -37,3 +37,4 @@ locals {
   quote_length    = length(local.quote)
   branded_quote   = "${local.quote} - City of Surprises"
 }
+}
