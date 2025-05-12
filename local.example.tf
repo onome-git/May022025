@@ -24,3 +24,7 @@ locals {
   original_text = "I AM A STUDENT AT MCIT"
   lower_text    = lower(local.original_text)
 }
+locals {
+  quote        = "Montreal: Where potholes have their own zip code."
+  upper_quote  = upper(local.quote)
+}
