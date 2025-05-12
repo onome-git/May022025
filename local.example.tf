@@ -48,3 +48,7 @@ locals {
   sentence_2 = "Poutine should be a food group."
   last_word = element(split(" ", local.sentence_2), length(split(" ", local.sentence_2)) - 1)
 }
+locals {
+  vowels = regexall("[aeiouAEIOU]", var.sentence)
+  vowel_count = length(local.vowels)
+}
