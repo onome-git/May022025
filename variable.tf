@@ -38,3 +38,6 @@ default = "my name is onome"
 variable "terms" {
   default = "Smoked meat is not a sandwich. It's a religion."
 }
+variable "sentence_4" {
+  default = "Why does St-Laurent never sleep?"
+}
