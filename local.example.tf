@@ -25,6 +25,15 @@ locals {
   lower_text    = lower(local.original_text)
 }
 locals {
-  quote        = "Montreal: Where potholes have their own zip code."
-  upper_quote  = upper(local.quote)
+  quote           = "Montreal: Where potholes have their own zip code."
+  upper_quote     = upper(local.quote)
+  lower_quote     = lower(local.quote)
+  short_quote     = substr(local.quote, 0, 10)
+  reversed        = join("", reverse(split("", local.quote)))
+  replaced        = replace(local.quote, "potholes", "craters")
+  has_zip         = contains(local.quote, "zip")
+  joined_quotes   = join(" | ", [local.quote, "Stay safe!"])
+  words           = split(" ", local.quote)
+  quote_length    = length(local.quote)
+  branded_quote   = "${local.quote} - City of Surprises"
 }
