@@ -43,7 +43,8 @@ value = substr(var.my_text, 11, 5)
 output "trimmed_word" {
   value = trim(var.trimmed_word, " ")
 }
- output "string_manipulations" {
+ 
+output "string_manipulations" {
   value = {
     upper          = local.upper_quote
     lower          = local.lower_quote
