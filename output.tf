@@ -61,3 +61,6 @@ output "string_manipulations" {
 output "reversed_sentence" {
   value = local.reversed_sentence
 }
+output "last_word" {
+  value = local.last_word
+}
