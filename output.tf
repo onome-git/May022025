@@ -64,3 +64,6 @@ output "reversed_sentence" {
 output "last_word" {
   value = local.last_word
 }
+output "number_of_vowels" {
+  value = local.vowel_count
+}
