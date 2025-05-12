@@ -43,3 +43,8 @@ locals {
   sentence_1 = "Montreal bagels taste better at 3am."
   reversed_sentence = join(" ", reverse(split(" ", local.sentence_1)))
 }
+
+locals {
+  sentence_2 = "Poutine should be a food group."
+  last_word = element(split(" ", local.sentence_2), length(split(" ", local.sentence_2)) - 1)
+}
