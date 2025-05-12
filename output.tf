@@ -43,6 +43,16 @@ value = substr(var.my_text, 11, 5)
 output "trimmed_word" {
   value = trim(var.trimmed_word, " ")
 }
-output "upper_quote" {
-  value = local.upper_quote
+  output "string_manipulations" {
+  value = {
+    upper          = local.upper_quote
+    lower          = local.lower_quote
+    first_10_chars = local.short_quote
+    reversed       = local.reversed
+    replaced       = local.replaced
+    contains_zip   = local.has_zip
+    joined         = local.joined_quotes
+    split_words    = local.words
+    length         = local.quote_length
+    with_suffix    = local.branded_quote
 }
