@@ -32,7 +32,7 @@ locals {
   short_quote     = substr(local.quote, 0, 10)
   reversed        = join("", reverse(split("", local.quote)))
   replaced        = replace(local.quote, "potholes", "craters")
-  has_zip         = contains(local.quote, "zip")
+  has_zip         = contains(local.quote, "zip"))
   joined_quotes   = join(" | ", [local.quote, "Stay safe!"])
   words           = split(" ", local.quote)
   quote_length    = length(local.quote)
