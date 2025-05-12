@@ -27,3 +27,7 @@ variable "full_text" {
 type=string
 default= "i love the country called canada, it is awesome"
 }
+variable "full_text" {
+type=string
+default = "my name is onome"
+}
