@@ -36,7 +36,7 @@ variable "sentence" {
   type        = string
   description = "A sentence to convert to uppercase"
 }
-variable "sentence" {
+variable "word" {
   type    = string
   default = "  I love Terraform  "
 }
