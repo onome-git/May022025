@@ -25,6 +25,7 @@ locals {
   lower_text    = lower(local.original_text)
 }
 
+  locals {
   quote           = "Montreal: Where potholes have their own zip code."
   upper_quote     = upper(local.quote)
   lower_quote     = lower(local.quote)
