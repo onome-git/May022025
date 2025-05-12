@@ -44,7 +44,7 @@ output "trimmed_word" {
   value = trim(var.trimmed_word, " ")
 }
  output "string_manipulations" {
-  value = 
+  value = {
     upper          = local.upper_quote
     lower          = local.lower_quote
     first_10_chars = local.short_quote
