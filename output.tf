@@ -69,3 +69,4 @@ output "number_of_vowels" {
 }
 output "sentence_with_underscores" {
   value = replace(var.sentence_4, " ", "_")
+}
