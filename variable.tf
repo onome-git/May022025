@@ -35,6 +35,6 @@ default = "my name is onome"
   type    = string
   default = "  I love Terraform  "
 }
-variable "sentence" {
+variable "terms" {
   default = "Smoked meat is not a sandwich. It's a religion."
 }
