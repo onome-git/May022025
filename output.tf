@@ -37,4 +37,5 @@ output "extract_canada"{
 value = substr(var.full_text, 26, 6)
 }
 output "extract_onome"{
-value= substr(var.full text,
+value= substr(var.full text, 11, 5)
+}
