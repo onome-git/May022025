@@ -38,3 +38,8 @@ locals {
   quote_length    = length(local.quote)
   branded_quote   = "${local.quote} - City of Surprises"
 }
+
+locals {
+  sentence_1 = "Montreal bagels taste better at 3am."
+  reversed_sentence = join(" ", reverse(split(" ", local.sentence_1)))
+}
