@@ -27,7 +27,6 @@ output "uppercased_sentence"{
 value= upper(var.sentence)
 }
 
-}
 output "list_of_numbers" {
 value = local.lower_text
 }
