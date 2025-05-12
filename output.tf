@@ -16,13 +16,16 @@ output "wintersportslist"{
 
 output "character_enemy_output" {
   value = local.character_enemy_map
+
 }
-output "top5restaurants_output" {
-  value = local.character_food_map
+output "top5_restaurants_output" {
+  value = local.top5_restaurants
+
 }
 
 output "uppercased_sentence"{
 value= upper(var.sentence)
+
 }
 output "list_of_numbers" {
 value = local.lower_text
