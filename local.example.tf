@@ -25,16 +25,15 @@ locals {
   lower_text    = lower(local.original_text)
 }
 
-  quote           = "Montreal: Where potholes have their own zip code."{
-  upper_quote     = upper(quote)
-  lower_quote     = lower(quote)
-  short_quote     = substr(quote, 0, 10)
-  reversed        = join("", reverse(split("", quote)))
-  replaced        = replace(quote, "potholes", "craters")
-  has_zip         = contains(quote, "zip")
-  joined_quotes   = join(" | ", [quote, "Stay safe!"])
-  words           = split(" ", quote)
-  quote_length    = length(quote)
-  branded_quote   = "${quote} - City of Surprises"
-  }
+  quote           = "Montreal: Where potholes have their own zip code."
+  upper_quote     = upper(local.quote)
+  lower_quote     = lower(local.quote)
+  short_quote     = substr(local.quote, 0, 10)
+  reversed        = join("", reverse(split("", local.quote)))
+  replaced        = replace(local.quote, "potholes", "craters")
+  has_zip         = contains(local.quote, "zip")
+  joined_quotes   = join(" | ", [local.quote, "Stay safe!"])
+  words           = split(" ", local.quote)
+  quote_length    = length(local.quote)
+  branded_quote   = "${local.quote} - City of Surprises"
 }
