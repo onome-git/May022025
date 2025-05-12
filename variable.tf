@@ -31,6 +31,7 @@ variable "my_text" {
 type=string
 default = "my name is onome"
 }
+ variable "trimword" {
   type    = string
   default = "  I love Terraform  "
 }
