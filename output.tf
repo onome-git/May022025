@@ -58,3 +58,6 @@ output "string_manipulations" {
     with_suffix    = local.branded_quote
   }
 }
+output "reversed_sentence" {
+  value = local.reversed_sentence
+}
