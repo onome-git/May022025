@@ -67,6 +67,6 @@ output "last_word" {
 output "number_of_vowels" {
   value = local.vowel_count
 }
-output "sentence_with_underscores" {
-  value = replace(var.sentence_4, " ", "_")
+output "modified_sentence_4" {
+  value = local.modified_sentence_4
 }
