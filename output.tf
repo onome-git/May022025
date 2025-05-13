@@ -83,3 +83,6 @@ output "even_positioned_chars" {
 output "sentence_8_reversed" {
   value = local.sentence_8_reversed
 }
+output "even_positioned_chars" {
+  value = local.even_positioned
+}
