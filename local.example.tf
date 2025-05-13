@@ -88,3 +88,20 @@ locals {
   ]
   sentence_9_capitalized = join(" ", local.capitalized_words)
 }
+locals {
+  sentence_10 = "tastes of montreal at every corner"
+
+  short_words = ["in", "of", "at"]
+
+  words_10 = split(" ", local.sentence_10)
+
+  capitalized_words_10 = [
+    for i, word in local.words_10 : (
+      i == 0 || !(contains(local.short_words, word)) ?
+      format("%s%s", upper(substr(word, 0, 1)), substr(word, 1, length(word) - 1)) :
+      word
+    )
+  ]
+
+  sentence_10_title_case = join(" ", local.capitalized_words_10)
+}
