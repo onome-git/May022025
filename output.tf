@@ -77,6 +77,6 @@ output "third_word" {
 output "clean_sentence_6" {
   value = local.sentence_6_no_punct
 }
-output "clean_sentence_6" {
-  value = local.sentence_6_no_punct
+output "even_positioned_chars" {
+  value = local.even_positioned
 }
