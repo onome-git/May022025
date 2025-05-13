@@ -72,5 +72,5 @@ output "modified_sentence_4" {
 }
 
 output "third_word" {
-  value = local.third_word
+  value = local.third_word_sentence5
 }
