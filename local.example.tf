@@ -80,7 +80,7 @@ locals {
   sentence_8_reversed   = join(" ", local.reversed_words_8)
 }
 
-ocals {
+locals {
   sentence_9         = "every foodie should visit once."
   words_9            = split(" ", local.sentence_9)
   capitalized_words  = [
