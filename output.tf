@@ -74,3 +74,6 @@ output "modified_sentence_4" {
 output "third_word" {
   value = local.third_word_sentence5
 }
+output "clean_sentence_6" {
+  value = local.sentence_6_no_punct
+};pp;.
