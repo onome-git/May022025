@@ -52,3 +52,7 @@ locals {
   vowels = regexall("[aeiouAEIOU]", var.sentence)
   vowel_count = length(local.vowels)
 }
+locals {
+  sentence_4          = "Why does St-Laurent never sleep?"
+  modified_sentence_4 = replace(local.sentence_4, " ", "_")
+}
