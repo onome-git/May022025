@@ -84,7 +84,7 @@ locals {
   sentence_9         = "every foodie should visit once."
   words_9            = split(" ", local.sentence_9)
   capitalized_words  = [
-    for word in local.words_9 : upper(substr(word, 0, 1)) + substr(word, 1, length(word) - 1)
+    for word in local.words_9 : upper(substr(word, 0, 1)), substr(word, 1, length(word) - 1)
   ]
   sentence_9_capitalized = join(" ", local.capitalized_words)
 }
