@@ -56,8 +56,9 @@ locals {
   sentence_4          = "Why does St-Laurent never sleep?"
   modified_sentence_4 = replace(local.sentence_4, " ", "_")
 }
+
 locals {
-  sentence_5      = "Bagels in Montreal are boiled, not baked."
- sentence_words           = split(" ", local.sentence_5)
-  third_word      = local.words[2]  # Indexing starts at 0
+  sentence_5           = "Bagels in Montreal are boiled, not baked."
+  sentence5_words      = split(" ", local.sentence_5)
+  third_word_sentence5 = local.sentence5_words[2]
 }
