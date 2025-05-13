@@ -62,3 +62,9 @@ locals {
   sentence5_words      = split(" ", local.sentence_5)
   third_word_sentence5 = local.sentence5_words[2]
 }
+ocals {
+  sentence_6              = "Is this the best food city in Canada?"
+  sentence_6_no_punct     = replace(local.sentence_6, "?", "")
+}
+
+
