@@ -89,3 +89,6 @@ output "capitalized_sentence_9" {
 output "sentence_10_title_case" {
   value = local.sentence_10_title_case
 }
+output "sentence_11_replaced" {
+  value = local.sentence_11_replaced
+}
