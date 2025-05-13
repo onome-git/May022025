@@ -67,4 +67,11 @@ ocals {
   sentence_6_no_punct     = replace(local.sentence_6, "?", "")
 }
 
+locals {
+  sentence_7       = "Montreal's food scene is elite!"
+  chars_list       = split("", local.sentence_7)
+  even_chars       = [for i in range(length(local.chars_list)) : local.chars_list[i] if i % 2 == 0]
+  even_positioned  = join("", local.even_chars)
+}
+
 
