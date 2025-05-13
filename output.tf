@@ -70,3 +70,7 @@ output "number_of_vowels" {
 output "modified_sentence_4" {
   value = local.modified_sentence_4
 }
+
+output "third_word" {
+  value = local.third_word
+}
