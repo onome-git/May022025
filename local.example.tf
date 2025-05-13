@@ -73,5 +73,10 @@ locals {
   even_chars       = [for i in range(length(local.chars_list)) : local.chars_list[i] if i % 2 == 0]
   even_positioned  = join("", local.even_chars)
 }
-
+locals {
+  sentence_8            = "Late-night diners are a blessing."
+  words_8               = split(" ", local.sentence_8)
+  reversed_words_8      = reverse(local.words_8)
+  sentence_8_reversed   = join(" ", local.reversed_words_8)
+}
 
