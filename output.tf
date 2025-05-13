@@ -86,4 +86,6 @@ output "sentence_8_reversed" {
 output "capitalized_sentence_9" {
   value = local.sentence_9_capitalized
 }
-
+output "sentence_10_title_case" {
+  value = local.sentence_10_title_case
+}
