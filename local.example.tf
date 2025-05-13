@@ -105,3 +105,7 @@ locals {
 
   sentence_10_title_case = join(" ", local.capitalized_words_10)
 }
+locals {
+  sentence_11             = "I eat poutine three times a week."
+  sentence_11_replaced    = replace(local.sentence_11, "poutine", "salad")
+}
