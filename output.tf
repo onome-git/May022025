@@ -102,3 +102,6 @@ output "sentence_11" {
 output "words" {
   value = local.words
 }
+output "last_word_raw" {
+  value = local.last_word_raw
+}
