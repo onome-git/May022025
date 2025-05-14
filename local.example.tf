@@ -114,3 +114,4 @@ locals {
   sentence  = "Poutine should be a food group."
   words     = split(" ", local.sentence)
   last_word = trimsuffix(local.words[length(local.words) - 1], ".")
+}
