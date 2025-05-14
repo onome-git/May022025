@@ -98,3 +98,6 @@ output "last_word" {
 output "split_words" {
   value = local.split_words
 }
+output "sentence_2" {
+  value = local.sentence_2
+}
