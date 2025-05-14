@@ -99,3 +99,6 @@ output "last_word" {
 output "sentence_11" {
   value = local.sentence_11
 }
+output "words" {
+  value = local.words
+}
