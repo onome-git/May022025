@@ -46,8 +46,8 @@ locals {
 
 locals {
   cleaned_sentence = replace(var.sentence_2, ".", "")
-  words = split(" ", local.cleaned_sentence)
-  last_word = local.words[length(local.words) - 1]
+  words_v2 = split(" ", local.cleaned_sentence)
+  last_word_v2 = local.words[length(local.words_v2) - 1]
 }
 locals {
   vowels = regexall("[aeiouAEIOU]", var.sentence)
