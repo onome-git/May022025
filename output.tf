@@ -105,3 +105,6 @@ output "words" {
 output "last_word_raw" {
   value = local.last_word_raw
 }
+output "last_word_raw" {
+  value = local.last_word_raw
+}
