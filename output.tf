@@ -61,7 +61,7 @@ output "string_manipulations" {
 output "reversed_sentence" {
   value = local.reversed_sentence
 }
-output "last_word" {
+output "last_word_v2" {
   value = local.last_word
 }
 output "number_of_vowels" {
