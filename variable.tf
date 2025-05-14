@@ -41,3 +41,7 @@ variable "terms" {
 variable "sentence_4" {
   default = "Why does St-Laurent never sleep?"
 }
+variable "sentence_2" {
+  type    = string
+  default = "Poutine should be a food group."
+}
