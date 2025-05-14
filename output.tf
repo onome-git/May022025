@@ -97,5 +97,5 @@ output "last_word" {
 }
 
 output "sentence_11" {
-  value = local.sentence_2
+  value = local.sentence_11
 }
