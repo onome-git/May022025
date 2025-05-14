@@ -62,7 +62,7 @@ output "reversed_sentence" {
   value = local.reversed_sentence
 }
 output "last_word_v2" {
-  value = local.last_word
+  value = local.last_word_v2
 }
 output "number_of_vowels" {
   value = local.vowel_count
