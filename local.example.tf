@@ -110,3 +110,7 @@ locals {
   sentence_11             = "I eat poutine three times a week."
   sentence_11_replaced    = replace(local.sentence_11, "poutine", "salad")
 }
+locals {
+  sentence  = "Poutine should be a food group."
+  words     = split(" ", local.sentence)
+  last_word = trimsuffix(local.words[length(local.words) - 1], ".")
