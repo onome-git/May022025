@@ -1,0 +1,4 @@
+locals {
+  sentence_2     = "Poutine should be a food group  ."
+  split_words    = split(" ", sentence_2)
+}
