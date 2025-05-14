@@ -95,9 +95,7 @@ output "sentence_11_replaced" {
 output "last_word" {
   value = local.cleaned_last_word
 }
-output "split_words" {
-  value = local.split_words
-}
+
 output "sentence_2" {
   value = local.sentence_2
 }
