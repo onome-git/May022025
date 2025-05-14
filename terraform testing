@@ -2,6 +2,6 @@ locals {
   sentence_11 = "Poutine should be a food group."
 }
 locals {
-  sentence_2 = "Poutine should be a food group."
-  words      = split(" ", local.sentence_2)
+  sentence_11 = "Poutine should be a food group."
+  words      = split(" ", local.sentence_11)
 }
