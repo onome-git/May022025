@@ -6,8 +6,8 @@ locals {
   words      = split(" ", local.sentence_11)
 }
 locals {
-  sentence_2    = "Poutine should be a food group."
-  words         = split(" ", local.sentence_2)
+  sentence_11   = "Poutine should be a food group."
+  words         = split(" ", local.sentence_11)
   last_index    = length(local.words) - 1
   last_word_raw = element(local.words, local.last_index)
 }
