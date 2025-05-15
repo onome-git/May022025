@@ -1,1 +1,2 @@
-
+output "last_word" {
+  value = element(split(" ", chomp("onome sean antione ovadia negar.")), length(split(" ", chomp("onome sean antione ovadia negar."))) - 1)
