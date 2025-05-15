@@ -5,5 +5,6 @@ locals {
   sentence_11 = "onome sean antione ovadia negar."
   words      = split(" ", local.sentence_11)
 
-last_word = local.words_list[length(local.words_list) - 1]
+locals {
+  last_word = split(" ", replace("onome sean antione ovadia negar.", "\\.$", ""))[length(split(" ", replace("onome sean antione ovadia negar.", "\\.$", ""))) - 1]
 }
