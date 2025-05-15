@@ -5,10 +5,5 @@ locals {
   sentence_11 = "onome sean antione ovadia negar."
   words      = split(" ", local.sentence_11)
 
-locals {
-  sentence_11     = "onome sean antione ovadia negar."
-  words          = split(" ", local.sentence_11)
-  last_index     = length(local.words) - 1
-  last_word_raw  = element(local.words, local.last_index)
-}
+last_word = local.words_list[length(local.words_list) - 1]
 }
