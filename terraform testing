@@ -1,10 +1,1 @@
-locals {
-  sentence_11 = "onome sean antione ovadia negar."
 
-locals {
-  sentence_11 = "onome sean antione ovadia negar."
-  words      = split(" ", local.sentence_11)
-
-locals {
-  last_word = split(" ", replace("onome sean antione ovadia negar.", "\\.$", ""))[length(split(" ", replace("onome sean antione ovadia negar.", "\\.$", ""))) - 1]
-}
