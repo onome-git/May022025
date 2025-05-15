@@ -106,14 +106,4 @@ locals {
 
   sentence_10_title_case = join(" ", local.capitalized_words_10)
 }
-locals {
-  sentence_11             = "I eat poutine three times a week."
-  sentence_11_replaced    = replace(local.sentence_11, "poutine", "salad")
-}
-locals {
-  sentence          = "Poutine should be a food group."
-  sentence_words    = split(" ", local.sentence)
-  last_word_index   = length(local.sentence_words) - 1
-  raw_last_word     = element(local.sentence_words, local.last_word_index)
-  cleaned_last_word = trimsuffix(local.raw_last_word, ".")
-}
+
