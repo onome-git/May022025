@@ -106,4 +106,3 @@ locals {
 
   sentence_10_title_case = join(" ", local.capitalized_words_10)
 }
-
