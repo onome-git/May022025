@@ -1,11 +1,11 @@
 locals {
   sentence_11 = "onome sean antione ovadia negar."
-}
-locals {
+
+
   sentence_11 = "onome sean antione ovadia negar."
   words      = split(" ", local.sentence_11)
-}
-locals {
+
+
   sentence_11     = "onome sean antione ovadia negar."
   words          = split(" ", local.sentence_11)
   last_index     = length(local.words) - 1
