@@ -93,7 +93,7 @@ output "sentence_11_replaced" {
   value = local.sentence_11_replaced
 }
 output "last_word" {
-  value = local.cleaned_last_word
+  value = local.cleaned_last_word_v11
 }
 
 output "last_word_v11" {
