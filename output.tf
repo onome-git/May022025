@@ -96,6 +96,6 @@ output "last_word" {
   value = local.cleaned_last_word
 }
 
-output "last_word" {
-  value = local.last_word
+output "last_word_v2" {
+  value = local.last_word_v2
 }
