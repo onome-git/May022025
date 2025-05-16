@@ -1,3 +1,2 @@
 output "extract_word" {
-  value = split(" ", "antione sean negar ovadia.")[length(split(" ", "antione sean negar ovadia.")) - 1]
-}
+  value = split(" ", var.sentence_2)[length(split(" ", var.sentence_2)) - 1]
