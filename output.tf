@@ -89,5 +89,7 @@ output "capitalized_sentence_9" {
 output "sentence_10_title_case" {
   value = local.sentence_10_title_case
 }
-
+output "last_word" {
+  value = local.last_word
+}
 
