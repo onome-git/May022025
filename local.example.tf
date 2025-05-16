@@ -111,6 +111,6 @@ locals {
   sentence_words = split(" ", trim(local.sentence_input, "."))
   sentence_last_word = local.sentence_words[length(local.sentence_words) - 1]
 }
-servicename="abracadabra
-  env="non-prod"
-full_servicname= "$(local.service name)=$local.env)"
+locals {
+  full_servicename = "${var.servicename}=${var.env}"
+}
