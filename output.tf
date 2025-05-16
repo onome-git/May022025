@@ -91,4 +91,5 @@ output "sentence_10_title_case" {
 }
 output "last_word" {
   value = local.sentence_last_word
+}
 
