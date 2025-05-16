@@ -45,7 +45,7 @@ variable "sentence_2" {
   type    = string
   default = "Poutine should be a food group."
 }
-ariable "servicename" {
+variable "servicename" {
   default = "abracadabra"
 }
 
