@@ -45,6 +45,6 @@ variable "sentence_2" {
   type    = string
   default = "Poutine should be a food group."
 }
-variable "sentence_2v2" {
+variable "sentence_2_v2" {
   default = "antione sean negar ovadia."
 }
