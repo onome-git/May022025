@@ -1,3 +1,3 @@
 output "last_word" {
-  value = split(" ", trim(var.sentence, "."))[length(split(" ", trim(var.sentence, "."))) - 1]
+  value = local.last_word
 }
