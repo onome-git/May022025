@@ -107,7 +107,7 @@ locals {
   sentence_10_title_case = join(" ", local.capitalized_words_10)
 }
 locals {
-  sentence     = "antione sean negar ovadia."
-  words        = split(" ", trim(local.sentence, "."))
-  last_word    = local.words[length(local.words) - 1]
+  sentence_input = "antione sean negar ovadia."
+  sentence_words = split(" ", trim(local.sentence_input, "."))
+  sentence_last_word = local.sentence_words[length(local.sentence_words) - 1]
 }
