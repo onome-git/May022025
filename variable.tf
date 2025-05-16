@@ -52,3 +52,10 @@ variable "servicename" {
 variable "env" {
   default = "non-prod"
 }
+variable "service_name" {
+  default = "onome"
+}
+
+variable "environments" {
+  default = ["dev", "qa", "stage", "prod"]
+}
