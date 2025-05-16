@@ -1,1 +1,3 @@
-split(" ", "antione sean negar ovadia.")[length(split(" ", "antione sean negar ovadia.")) - 1]
+variable "sentence" {
+  default = "antione sean negar ovadia."
+}
