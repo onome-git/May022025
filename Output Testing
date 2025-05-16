@@ -1,3 +1,7 @@
 
 output "last_word" {
   value = local.sentence_last_word
+
+output "full_servicename" {
+  value = local.full_servicename
+}
