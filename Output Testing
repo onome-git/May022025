@@ -1,2 +1,2 @@
 output "extract_word" {
-  value = split(" ", var.sentence_2)[length(split(" ", var.sentence_2)) - 1]
+  value = split(" ", var.sentence_2_v2)[length(split(" ", var.sentence_2_v2)) - 1]
