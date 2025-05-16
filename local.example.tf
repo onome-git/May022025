@@ -108,6 +108,6 @@ locals {
 }
 locals {
   sentence   = "antione sean negar ovadia."
-  words_v2      = split(" ", trim(local.sentence, "."))
-  last_word-v2  = local.words_v2[length(local.words) - 1]
+  words_v2.1      = split(" ", trim(local.sentence, "."))
+  last_word-v2.1  = local.words_v2.1[length(local.words_v2.1) - 1]
 }
