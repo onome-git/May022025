@@ -114,3 +114,9 @@ locals {
 locals {
   full_servicename = "${var.servicename}=${var.env}"
 }
+locals {
+  full_service_names = {
+    for env in var.environments :
+    env => "${env}${var.service_name}"
+  }
+}
