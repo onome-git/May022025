@@ -1,5 +1,5 @@
 locals {
   sentence   = "antione sean negar ovadia."
-  words      = split(" ", trim(local.sentence, "."))
-  last_word  = local.words[length(local.words) - 1]
+  wordsv2      = split(" ", trim(local.sentence, "."))
+  last_wordv2  = local.words[length(local.wordsv2) - 1]
 }
