@@ -1,6 +1,6 @@
 
 output "last_wordv2" {
-  value = local.sentence_last_wordv2
+  value = local.sentence_last_word
 }
 
 output "full_servicename" {
