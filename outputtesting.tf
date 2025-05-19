@@ -10,3 +10,6 @@ output "full_servicename" {
 output "onome16may2025" {
   value = local.full_service_names
 }
+output   "last_word"{
+  value  = local.sentence_word
+}
