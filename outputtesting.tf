@@ -1,6 +1,6 @@
 
-output "last_word" {
-  value = local.sentence_last_word
+output "last_wordv2" {
+  value = local.sentence_last_wordv2
 }
 
 output "full_servicename" {
