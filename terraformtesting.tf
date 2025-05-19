@@ -4,7 +4,7 @@ locals {
   last_wordv2  = local.wordsv2[length(local.wordsv2) - 1]
 }
 locals{
-sentence                       = "i love my children"
+my_sentence                       = "i love my children"
 sentence_wordv3        split   =(" ", local.sentence)
 sentence_last_index    length  =(local.sentence_wordsv3)-1
 sentnce_last_wordv3    element =(local.sentence_wordsv3, local.sentence_last_index)        
