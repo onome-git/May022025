@@ -11,6 +11,6 @@ output "onome16may2025" {
   value = local.full_service_names
 }
 
-output "last_wordv3" {
+output "last_word_in_sentence" {
   value = local.sentence_last_wordv3
 }
