@@ -10,34 +10,22 @@ locals{
       }
     ]
 ])
-    waf_policy=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
-    waf_policy_list = flatten([
-    for policy in local.waf_policy : [
-      for policies in try(policy.listofwafpolicies, []) :{
-        name=policies.name
-        custom_rules=policies.custom_rules
-        managed_rules=policies.managed_rules
-        }
-    ]
-])
-}
+  
 
-
-
-resource "azurerm_service_plan" "batcha06sp" {
+resource "azurerm_service_plan" "onomespmay022025" {
   for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
   name                = each.value.name
-  resource_group_name = azurerm_resource_group.azureresourcegroup.name
-  location            = azurerm_resource_group.azureresourcegroup.location
+  resource_group_name = azurerm_resource_group.onomespmay022025.name
+  location            = azurerm_resource_group.onomespmay022025.location
   os_type             = each.value.os_type
   sku_name            = each.value.sku_name
 }
 
-resource "azurerm_linux_web_app" "batcha06webapp" {
-  for_each            = azurerm_service_plan.batcha06sp
+resource "azurerm_linux_web_app" "onomespmay022025webapp" {
+  for_each            = azurerm_service_plan.onomespmay022025sp
   name                = each.value.name
-  resource_group_name = azurerm_resource_group.azureresourcegroup.name
-  location            = azurerm_resource_group.azureresourcegroup.location
+  resource_group_name = azurerm_resource_group.onomespmay022025.name
+  location            = azurerm_resource_group.onomespmay022025.location
   service_plan_id     = each.value.id
 
   site_config {}
