@@ -22,7 +22,7 @@ resource "azurerm_service_plan" "onomespmay022025" {
 }
 
 resource "azurerm_linux_web_app" "onomespmay022025webapp" {
-  for_each            = azurerm_service_plan.onomespmay022025sp
+  for_each            = azurerm_service_plan.onomespmay022025
   name                = each.value.name
   resource_group_name = azurerm_resource_group.onomespmay022025.name
   location            = azurerm_resource_group.onomespmay022025.location
