@@ -8,8 +8,7 @@ locals{
         os_type=linuxapps.os_type
         sku_name=linuxapps.sku_name     
       }
-    ]
-])
+   
   
 
 resource "azurerm_service_plan" "onomespmay022025" {
