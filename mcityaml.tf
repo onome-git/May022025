@@ -1,1 +1,39 @@
 
+locals {
+  windows_app = [
+    for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))
+  ]
+
+  windows_app_list = flatten([
+    for app in local.linux_app : [
+      for linuxapps in try(app.listoflinuxapp, []) : {
+        name     = windowsapps.name
+        os_type  =windowsapps.os_type
+        sku_name = windowsapps.sku_name     
+      }
+    ]
+  ])
+}
+
+
+resource "azurerm_service_plan" "onomemay022025" {
+  for_each = { for sp in local.windows_app_list : sp.name => sp }
+ 
+name                = each.value.name
+  resource_group_name  = azurerm_resource_group.onomemay022025.name
+  location            = azurerm_resource_group.onomemay022025.location
+  os_type             = each.value.os_type
+  sku_name            = each.value.sku_name
+}
+
+
+resource "azurerm_windows_web_app" "onomemay022025webapp" {
+  for_each = azurerm_service_plan.onomemay022025
+
+name                = each.value.name
+  resource_group_name  = azurerm_resource_group.onomemay022025.name
+  location            = azurerm_resource_group.onomemay022025.location
+  service_plan_id     = each.value.id
+
+  site_config {}
+}
