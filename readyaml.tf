@@ -16,23 +16,23 @@ locals {
 }
 
 
-resource "azurerm_service_plan" "onomespmay022025" {
+resource "azurerm_service_plan" "onomemay022025" {
   for_each = { for sp in local.linux_app_list : sp.name => sp }
  
 name                = each.value.name
-  resource_group_name  = azurerm_resource_group.onomespmay022025.name
-  location            = azurerm_resource_group.onomespmay022025.location
+  resource_group_name  = azurerm_resource_group.onomemay022025.name
+  location            = azurerm_resource_group.onomemay022025.location
   os_type             = each.value.os_type
   sku_name            = each.value.sku_name
 }
 
 
-resource "azurerm_linux_web_app" "onomespmay022025webapp" {
-  for_each = azurerm_service_plan.onomespmay022025
+resource "azurerm_linux_web_app" "onomemay022025webapp" {
+  for_each = azurerm_service_plan.onomemay022025
 
 name                = each.value.name
-  resource_group_name  = azurerm_resource_group.onomespmay022025.name
-  location            = azurerm_resource_group.onomespmay022025.location
+  resource_group_name  = azurerm_resource_group.onomemay022025.name
+  location            = azurerm_resource_group.onomemay022025.location
   service_plan_id     = each.value.id
 
   site_config {}
