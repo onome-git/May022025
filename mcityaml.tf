@@ -5,7 +5,7 @@ locals {
   windows_app_list = flatten([
     for app in local.windows_app : [
       for windowsapps in try(app.listofwindowsapp, []) : {
-        name     = windowsapps.name
+        name     = firstwindowsapp 
         os_type  = windowsapps.os_type
         sku_name = windowsapps.sku_name     
       }
@@ -14,7 +14,7 @@ locals {
 }
 
 resource "azurerm_resource_group" "onomemay022025v2" {
-  name     =  windowsapps.name
+  name     =  secondwindowsapp 
   location =  azurerm_resource_group.onomemay022025v2.location
 }
 
@@ -33,7 +33,7 @@ resource "azurerm_service_plan" "onomemay022025v2" {
 resource "azurerm_windows_web_app" "onomemay022025v2webapp" {
   for_each            = azurerm_service_plan.onomemay022025v2
 
-  name                = each.value.name
+  name                = thirdwindowsapp
   resource_group_name = azurerm_resource_group.onomemay022025v2.name
   location            = azurerm_resource_group.onomemay022025v2.location
   service_plan_id     = each.value.id
