@@ -14,7 +14,7 @@ locals {
 }
 
 resource "azurerm_resource_group" "onomemay022025v2" {
-  name     = "onomemay022025v2-rg"
+  name     =  windowsapps.name
   location =  azurerm_resource_group.onomemay022025v2.location
 }
 
