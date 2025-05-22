@@ -7,7 +7,7 @@ resource "azurerm_storage_account" "mcitdevrm" {
 
   name                      = each.value
   resource_group_name       = "onomeresources"  
-  location                  = "East US"
+  location                  = azurerm_resource_group.onomemay022025.location
   account_tier              = "Standard"
   account_replication_type  = "LRS"
 }
