@@ -1,7 +1,6 @@
-
 locals {
-  windows_app = [
-  windows_app=[for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))
+  windows_app = [for f in fileset("${path.module}/configs", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))]
+}
   ]
 
   windows_app_list = flatten([
@@ -14,7 +13,6 @@ locals {
     ]
   ])
 }
-
 
 resource "azurerm_service_plan" "onomemay022025v2" {
   for_each = { for sp in local.windows_app_list : sp.name => sp }
@@ -37,3 +35,5 @@ name                = each.value.name
 
   site_config {}
 }
+
+
