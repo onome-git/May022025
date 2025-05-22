@@ -19,7 +19,7 @@ locals {
 resource "azurerm_service_plan" "onomemay022025" {
   for_each = { for sp in local.linux_app_list : sp.name => sp }
  
-name                = each.value.name
+name                = onomemay022025.name
   resource_group_name  = azurerm_resource_group.onomemay022025.name
   location            = azurerm_resource_group.onomemay022025.location
   os_type             = each.value.os_type
