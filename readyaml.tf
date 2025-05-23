@@ -15,16 +15,19 @@ locals{
 
 resource "azurerm_service_plan" "batcha06sp" {
   for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
-  name                = each.value.name
+  name                = firstlinuxapp
   resource_group_name = azurerm_resource_group.onomemaysp022025.name
   location            = azurerm_resource_group.onomemaysp022025.location
-  os_type             = each.value.os_type
-  sku_name            = each.value.sku_name
+  os_type             =linux
+  sku_name            = p1v2
 }
 
 resource "azurerm_linux_web_app" "batcha06webapp" {
   for_each            = azurerm_service_plan.batcha06sp
-  name                = each.value.name
+  name                = thirdliuxapp
+  os_type             =linux
+  sku_name            = p1v2
+
   resource_group_name = azurerm_resource_group.onomespmaysp022025.name
   location            = azurerm_resource_group.onomespmaysp022025.location
   service_plan_id     = each.value.id
