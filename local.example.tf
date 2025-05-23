@@ -126,7 +126,10 @@ locals {
     ["orange", "grape"],
     ["kiwi"]
   ]
-}
 
-  flat_list = flatten(local.nested_list)
+  flat_list = flatten([
+    ["apple", "banana"],
+    ["orange", "grape"],
+    ["kiwi"]
+  ])
 }
