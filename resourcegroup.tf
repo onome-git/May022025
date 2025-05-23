@@ -16,7 +16,7 @@ resource "azurerm_storage_account" "mcitdevrm" {
   tags = {
     environment = "dev"
   }
-
+}
 
 
 
