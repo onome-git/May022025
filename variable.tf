@@ -63,3 +63,7 @@ variable "configs_folder" {
   type        = string
   default     = "configs"  
 }
+variable "folderlocation" {
+  type        = string
+  default     = "windows_configs" 
+}
