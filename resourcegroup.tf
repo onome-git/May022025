@@ -11,11 +11,12 @@ resource "azurerm_storage_account" "mcitdevrm" {
   location                 = azurerm_resource_group.mcitdevrm.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
+}
 
   tags = {
     environment = "dev"
   }
-}
+
 
 
 
