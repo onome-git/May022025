@@ -27,8 +27,8 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
   os_type             = each.value.os_type
   sku_name            = each.value.sku_name
 
-  resource_group_name = azurerm_resource_group.onomespmaysp022025.name
-  location            = azurerm_resource_group.onomespmaysp022025.location
+  resource_group_name = azurerm_resource_group.onomespmay022025.name
+  location            = azurerm_resource_group.onomespmay022025.location
   service_plan_id     = each.value.id
 
   site_config {}
