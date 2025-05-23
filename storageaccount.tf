@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "mcitstorage" {
+resource "azurerm_storage_account" "mcitstorage_v2" {
   name                     = var.onomestoragemay
   resource_group_name      = azurerm_resource_group.onomespmay022025.name
   location                 = azurerm_resource_group.onomespmay022025.location
