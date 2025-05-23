@@ -31,7 +31,7 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
   location            = azurerm_resource_group.onomespmay022025v2.location
   service_plan_id     = each.value.id
 
-  site_config {}
+  site_config {
     always_on = true 
 }
 }
