@@ -1,6 +1,6 @@
 resource "azurerm_service_plan" "batcha06sp" {
   for_each            = { for sp in local.linux_app_list : sp.name => sp }
-  name                = each.value.name
+  name                = "onomelinuxwebapp-${each.value.name}"
   resource_group_name = azurerm_resource_group.onomespmay022025v2.name
   location            = azurerm_resource_group.onomespmay022025v2.location
   os_type             = each.value.os_type
