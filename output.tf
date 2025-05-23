@@ -96,3 +96,6 @@ output "nested_list_output" {
 output "flattened_list_output" {
   value = local.flat_list
 }
+output "windows_app_list" {
+  value = local.windows_app_list
+}
