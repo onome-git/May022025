@@ -1,7 +1,7 @@
 locals {
   windows_app = [
-    for f in fileset("${path.module}/configs", "[^_]*.yaml") :
-    yamldecode(file("${path.module}/configs/${f}"))
+    for f in fileset("${path.module}/${var.folderlocation}", "[^_]*.yaml") :
+    yamldecode(file("${path.module}/${var.folderlocation}/${f}"))
   ]
 
   windows_app_list = flatten([
@@ -14,6 +14,7 @@ locals {
     ]
   ])
 }
+
 
 resource "azurerm_resource_group" "onomespmay022025v2" {
   name     = "onomespmay022025v2"
