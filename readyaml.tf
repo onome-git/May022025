@@ -1,8 +1,6 @@
-
 locals {
   linux_app = [
-    for f in fileset("${path.module}/var.configs_folder", "[^_]*.yaml") :
-    yamldecode(file("${path.module}/configs/${f}"))
+    for f in fileset("${path.module}/var.configs_folder", "[^_]*.yaml") : yamldecode(file("${path.module}/configs/${f}"))
   ]
 
   linux_app_list = flatten([
