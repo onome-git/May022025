@@ -120,3 +120,10 @@ locals {
     env => "${env}${var.service_name}"
   }
 }
+locals {
+  nested_list = [
+    ["apple", "banana"],
+    ["orange", "grape"],
+    ["kiwi"]
+  ]
+}
