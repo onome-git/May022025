@@ -1,7 +1,6 @@
 locals {
   windows_app = [
-    for f in fileset("${path.module}/${var.folderlocation}", "[^_]*.yaml") :
-    yamldecode(file("${path.module}/${var.folderlocation}/${f}"))
+    for f in fileset("${path.module}/${var.folderlocation}", "[^_]*.yaml") : yamldecode(file("${path.module}/${var.folderlocation}/${f}"))
   ]
 
   windows_app_list = flatten([
