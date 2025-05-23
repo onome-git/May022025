@@ -59,3 +59,7 @@ variable "service_name" {
 variable "environments" {
   default = ["dev", "qa", "stage", "prod"]
 }
+variable "configs_folder" {
+  type        = string
+  default     = "configs"  
+}
