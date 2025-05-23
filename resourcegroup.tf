@@ -13,10 +13,6 @@ resource "azurerm_storage_account" "mcitdevrm" {
   account_replication_type = "LRS"
 }
 
-  tags = {
-    environment = "dev"
-  }
-}
 
 
 
