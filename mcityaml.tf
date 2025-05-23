@@ -13,28 +13,28 @@ locals {
   ])
 }
 
-resource "azurerm_resource_group" "onomemay022025v2" {
+resource "azurerm_resource_group" "onomespmay022025v2" {
   name     =  secondwindowsapp 
-  location =  azurerm_resource_group.onomemay022025v2.location
+  location =  azurerm_resource_group.onomespmay022025v2.location
 }
 
 
-resource "azurerm_service_plan" "onomemay022025v2" {
+resource "azurerm_service_plan" "onomespmay022025v2" {
   for_each            = { for sp in local.windows_app_list : sp.name => sp }
 
   name                = each.value.name
-  resource_group_name = azurerm_resource_group.onomemay022025v2.name
-  location            = azurerm_resource_group.onomemay022025v2.location
+  resource_group_name = azurerm_resource_group.onomespmay022025v2.name
+  location            = azurerm_resource_group.onomespmay022025v2.location
   os_type             = each.value.os_type
   sku_name            = each.value.sku_name
 }
 
 
-resource "azurerm_windows_web_app" "onomemay022025v2webapp" {
+resource "azurerm_windows_web_app" "onomespmay022025v2webapp" {
   for_each            = azurerm_service_plan.onomemay022025v2
 
   name                = thirdwindowsapp
-  resource_group_name = azurerm_resource_group.onomemay022025v2.name
+  resource_group_name = azurerm_resource_group.onomespmay022025v2.name
   location            = azurerm_resource_group.onomemay022025v2.location
   service_plan_id     = each.value.id
 
