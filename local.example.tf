@@ -127,3 +127,6 @@ locals {
     ["kiwi"]
   ]
 }
+
+  flat_list = flatten(local.nested_list)
+}
