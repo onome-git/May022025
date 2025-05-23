@@ -23,10 +23,14 @@ resource "azurerm_service_plan" "batcha06sp" {
 
 resource "azurerm_linux_web_app" "batcha06webapp" {
   for_each            = azurerm_service_plan.batcha06sp
+
   name                = each.value.name
   resource_group_name = azurerm_resource_group.onomespmay022025v2.name
   location            = azurerm_resource_group.onomespmay022025v2.location
   service_plan_id     = each.value.id
+
+  site_config {}
+}
 
   resource_group_name = azurerm_resource_group.onomespmay022025v2.name
   location            = azurerm_resource_group.onomespmay022025v2.location
