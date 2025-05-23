@@ -18,6 +18,4 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
   site_config {
     always_on = true
   }
-
-  }
 }
