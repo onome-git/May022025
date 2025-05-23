@@ -1,3 +1,4 @@
+
 locals {
   linux_app = [
     for f in fileset("${path.module}/var.configs_folder", "[^_]*.yaml") :
@@ -35,21 +36,4 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
   site_config {
     always_on = true
   }
-}
-  resource_group_name = azurerm_resource_group.onomespmay022025v2.name
-  location            = azurerm_resource_group.onomespmay022025v2.location
-  service_plan_id     = each.value.id
-
-  site_config {
-    always_on = true
-  }
-}
-
-  resource_group_name = azurerm_resource_group.onomespmay022025v2.name
-  location            = azurerm_resource_group.onomespmay022025v2.location
-  service_plan_id     = each.value.id
-
-  site_config {
-    always_on = true 
-}
 }
