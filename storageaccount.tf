@@ -6,7 +6,7 @@ resource "azurerm_storage_account" "mcitstorage_v2" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_storage_account" "mcitdevrm" {
+resource "azurerm_storage_account" "mcitdevrm-v2" {
   for_each = local.full_service_names
 
   name                     = each.value
