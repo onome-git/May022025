@@ -5,7 +5,16 @@ resource "azurerm_storage_account" "mcitstorage" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  tags = {
+resource "azurerm_storage_account" "mcitdevrm" {
+  for_each = local.full_service_names
+
+  name                = each.value
+  resource_group_name = azurerm_resource_group.mcitdevrm.name     # refer to the declared resource group
+  location            = azurerm_resource_group.mcitdevrm.location # same here
+  account_tier        = "Standard"
+  account_replication_type = "LRS"
+}
+ tags = {
     environment = "dev"
   }
 }
