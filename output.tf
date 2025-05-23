@@ -93,3 +93,6 @@ output "sentence_10_title_case" {
 output "nested_list_output" {
   value = local.nested_list
 }
+output "flattened_list_output" {
+  value = local.flat_list
+}
