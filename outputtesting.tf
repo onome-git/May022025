@@ -25,3 +25,7 @@ output "vms_map" {
 output "resource_group_names" {
   value = [for rg in azurerm_resource_group.rgs : rg.name]
 }
+
+output "combined_map" {
+  value = local.combined_map
+}
