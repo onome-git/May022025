@@ -167,3 +167,7 @@ locals {
   regions      = ["eastus", "westeurope", "southindia", "centralus"]
   filtered_us  = [for r in local.regions : r if can(regex("us", r))]
 }
+
+locals {
+  cidrs = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+}
