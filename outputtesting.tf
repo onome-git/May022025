@@ -17,3 +17,8 @@ output "last_word_in_sentence" {
 output "uppercase_names" {
   value = local.upper_names
 }
+
+
+output "vms_map" {
+  value = local.vms_map
+}
