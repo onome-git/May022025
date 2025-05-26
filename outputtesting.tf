@@ -37,3 +37,7 @@ output "regions_with_us" {
 output "apps_count" {
   value = length(local.apps)
 }
+
+output "subnet_ids" {
+  value = [for subnet in azurerm_subnet.subnets : subnet.id]
+}
