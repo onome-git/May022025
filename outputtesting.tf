@@ -29,3 +29,7 @@ output "resource_group_names" {
 output "combined_map" {
   value = local.combined_map
 }
+
+output "regions_with_us" {
+  value = local.filtered_us
+}
