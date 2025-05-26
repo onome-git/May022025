@@ -33,3 +33,7 @@ output "combined_map" {
 output "regions_with_us" {
   value = local.filtered_us
 }
+
+output "apps_count" {
+  value = length(local.apps)
+}
