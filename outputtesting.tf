@@ -41,3 +41,13 @@ output "apps_count" {
 output "subnet_ids" {
   value = [for subnet in azurerm_subnet.subnets : subnet.id]
 }
+
+output "vm_ids" {
+  value = { for vm_name, vm in azurerm_windows_virtual_machine.example : vm_name => vm.id }
+  description = "Map of VM names to their resource IDs"
+}
+
+output "vm_private_ips" {
+  value = { for vm_name, nic in azurerm_network_interface.example : vm_name => nic.ip_configuration[0].private_ip_address }
+  description = "Map of VM names to their private IP addresses"
+}
