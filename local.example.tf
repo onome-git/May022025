@@ -144,6 +144,9 @@ locals {
 }
 
 locals {
+  apps = ["api", "frontend", "worker", "db"]
+}
+locals {
   rg_names = ["dev-rg", "test-rg", "prod-rg"]
 }
 
