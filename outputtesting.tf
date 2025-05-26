@@ -14,3 +14,6 @@ output "onome16may2025" {
 output "last_word_in_sentence" {
   value = local.sentence_last_wordv3
 }
+output "uppercase_names" {
+  value = local.upper_names
+}
