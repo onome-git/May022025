@@ -9,3 +9,7 @@ my_sentence            = "i love my children"
   sentence_last_index    = length(local.sentence_wordv3) - 1
   sentence_last_wordv3   = element(local.sentence_wordv3, local.sentence_last_index)
 }
+locals {
+  names         = ["eastus", "westeurope", "centralindia"]
+  upper_names   = [for name in local.names : upper(name)]
+}
