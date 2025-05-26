@@ -22,3 +22,6 @@ output "uppercase_names" {
 output "vms_map" {
   value = local.vms_map
 }
+output "resource_group_names" {
+  value = [for rg in azurerm_resource_group.rgs : rg.name]
+}
