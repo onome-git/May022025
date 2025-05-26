@@ -152,3 +152,9 @@ resource "azurerm_resource_group" "rgs" {
   name     = each.value
   location = "East US"
 }
+locals {
+  keys   = ["env", "team", "owner"]
+  values = ["prod", "devops", "alice"]
+
+  combined_map = zipmap(local.keys, local.values)
+}
