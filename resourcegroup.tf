@@ -17,11 +17,11 @@ resource "azurerm_storage_account" "mcitdevrm" {
   }
 }
 
-resource "azurerm_virtual_network" "example" {
-  name                = "example-vnet"
+resource "azurerm_virtual_network" "example2" {
+  name                = "example2-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
-  resource_group_name = "example-rg"
+  resource_group_name = "example2-rg"
 }
 
 resource "azurerm_subnet" "subnets" {
