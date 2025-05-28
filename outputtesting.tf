@@ -51,3 +51,16 @@ output "vm_private_ips" {
   value = { for vm_name, nic in azurerm_network_interface.example : vm_name => nic.ip_configuration[0].private_ip_address }
   description = "Map of VM names to their private IP addresses"
 }
+
+
+output "region" {
+  value = local.region
+}
+ 
+output "is_primary_region" {
+  value = local.is_primary
+}
+ 
+output "environment" {
+  value = local.environment
+}
