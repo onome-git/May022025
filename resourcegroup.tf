@@ -33,6 +33,8 @@ resource "azurerm_subnet" "subnets" {
   address_prefixes     = [each.value]
 }
 
+
+
 resource "azurerm_subnet" "subnet" {
   for_each             = local.subnets
   name                 = each.key
@@ -40,3 +42,14 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   resource_group_name  = azurerm_resource_group.rg.name
 }
+
+resource "azurerm_resource_group" "rg" {
+  name     = "example-resources"
+  location = "eastus"
+}
+
+resource "azurerm_virtual_network" "vnet" {
+  name                = "example-vnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
