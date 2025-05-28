@@ -99,3 +99,10 @@ output "flattened_list_output" {
 output "windows_app_list" {
   value = local.windows_app_list
 }
+
+
+locals {
+  region       = "eastus"
+  is_primary   = local.region == "eastus" ? true : false
+  environment  = local.is_primary ? "production" : "staging"
+}
