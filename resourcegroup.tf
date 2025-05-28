@@ -32,3 +32,11 @@ resource "azurerm_subnet" "subnets" {
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = [each.value]
 }
+
+resource "azurerm_subnet" "subnet" {
+  for_each             = local.subnets
+  name                 = each.key
+  address_prefixes     = [each.value]
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  resource_group_name  = azurerm_resource_group.rg.name
+}
