@@ -14,5 +14,12 @@ locals {
   upper_names   = [for name in local.names : upper(name)]
 }
 
-
-
+locals {
+  nested_list = [
+    ["red", "blue"],
+    ["green", "yellow"],
+    ["black"]
+  ]
+}
+flat_list = flatten(local.nested_list)
+}
