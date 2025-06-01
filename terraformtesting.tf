@@ -20,6 +20,6 @@ locals {
     ["green", "yellow"],
     ["black"]
   ]
-}
-flat_list = flatten(local.nestedv2_list)
+
+  flat_list = flatten(local.nestedv2_list)
 }
