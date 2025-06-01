@@ -52,5 +52,7 @@ output "vm_private_ips" {
   description = "Map of VM names to their private IP addresses"
 }
 
-
+output "flattened_list_output" {
+  value = local.flat_list
+}
 
