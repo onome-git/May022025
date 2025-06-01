@@ -102,3 +102,4 @@ output "windows_app_list" {
 
 output "flattened_v2_output" {
   value = local.flatv2_list
+}
