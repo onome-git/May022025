@@ -21,5 +21,5 @@ locals {
     ["black"]
   ]
 
-  flat_list = flatten(local.nestedv2_list)
+  flatv2_list = flatten(local.nestedv2_list)
 }
