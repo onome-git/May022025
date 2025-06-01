@@ -15,11 +15,11 @@ locals {
 }
 
 locals {
-  nested_list = [
+  nestedv2_list = [
     ["red", "blue"],
     ["green", "yellow"],
     ["black"]
   ]
 }
-flat_list = flatten(local.nested_list)
+flat_list = flatten(local.nestedv2_list)
 }
