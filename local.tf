@@ -6,3 +6,7 @@ locals {
     prod    = "Production"
   }
 }
+
+locals {
+  environment = lookup(local.env_names, terraform.workspace, "Unknown")
+}
