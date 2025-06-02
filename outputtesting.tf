@@ -52,4 +52,7 @@ output "vm_private_ips" {
   description = "Map of VM names to their private IP addresses"
 }
 
-
+output "selected_environment_name" {
+  value       = local.environment
+  description = "The friendly name of the current environment based on workspace."
+}
