@@ -4,7 +4,7 @@ variable "name" {
   type        = string
 }
 
-variable "resource1_group_name" {
+variable "resourcev2_group_name" {
   type = string
 }
 
