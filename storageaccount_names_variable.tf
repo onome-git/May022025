@@ -8,7 +8,7 @@ variable "resource1_group_name" {
   type = string
 }
 
-variable "location" {
+variable "location1" {
   type = string
 }
 
