@@ -8,5 +8,5 @@ locals {
 }
 
 locals {
-  environment = lookup(local.env_names, "dev" "Unknown")
+  environment = lookup(local.env_names, "dev", "Unknown")
 }
