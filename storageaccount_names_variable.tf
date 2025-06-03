@@ -1,5 +1,5 @@
 
-ariable "name" {
+variable "name" {
   description = "Name of the storage account"
   type        = string
 }
