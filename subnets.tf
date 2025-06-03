@@ -1,7 +1,7 @@
 locals {
   region       = "eastus"
   is_primary   = local.region == "eastus" ? true : false
-  environment  = local.is_primary ? "production" : "staging"
+  environment  = local.is_primary ? "production1" : "staging1"
 }
 
 output "region" {
