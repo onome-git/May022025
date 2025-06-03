@@ -12,8 +12,8 @@ output "is_primary_region" {
   value = local.is_primary
 }
 
-output "environment" {
-  value = local.environment
+output "environment2" {
+  value = local.environment2
 }
 
 locals {
