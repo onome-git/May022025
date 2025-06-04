@@ -1,5 +1,5 @@
 module "mymcitstorage_v4" {
-  source              = "./module/storage_account"  
+  source              = "./modules/storage_account"  
   name                = "onomestorageaccount"
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
   location            = azurerm_resource_group.mcit420zz5um.location
@@ -14,7 +14,7 @@ module "mymcitstorage_v4" {
 }
 
 module "mymcitstorage_v5" {
-  source = "./module/storage_account"
+  source = "./modules/storage_account"
 
   for_each = var.storage_accounts  # Loops over the map to create 4 storage accounts
 
