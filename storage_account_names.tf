@@ -1,14 +1,4 @@
 
-locals {
-  storage_account_names = [
-    "storageacconome1",
-    "storageacconome2",
-    "storageacconome3",
-    "storageacconome4",
-    "storageacconome5",
-  ]
-}
-
 module "mymcitstorage_v3" {
   for_each                  = toset(local.storage_account_names)
   source                    = "./modules/storage_account"
