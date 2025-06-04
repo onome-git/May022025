@@ -5,7 +5,7 @@ locals {
     "storageacconome2",
     "storageacconome3",
     "storageacconome4",
-    "storageacconome5"
+    "storageacconome5",
   ]
 }
 
