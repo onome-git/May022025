@@ -57,3 +57,4 @@ resource "azurerm_resource_group" "mcit420zz5um" {
   name     = "my-resource-group-name"
   location = "Canada Central" 
 }
+
