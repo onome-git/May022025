@@ -82,3 +82,28 @@ variable "folderlocation" {
   type        = string
   default     = "windows_configs" 
 }
+
+variable "name" {
+  description = "The name of the storage account"
+  type        = string
+}
+
+variable "account_tier" {
+  description = "The tier of the storage account"
+  type        = string
+}
+
+variable "account_replication_type" {
+  description = "Replication type of the storage account"
+  type        = string
+}
+
+variable "access_tier" {
+  description = "Access tier (e.g. Hot, Cool)"
+  type        = string
+}
+
+variable "tags" {
+  description = "Tags for the storage account"
+  type        = map(string)
+}
