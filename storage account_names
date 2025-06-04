@@ -1,11 +1,11 @@
 
 locals {
   storage_account_names = [
-    "samistorageacconome1",
-    "samistorageacconome2",
-    "samistorageacconome3",
-    "samistorageacconome4",
-    "samistorageacconome5"
+    "storageacconome1",
+    "storageacconome2",
+    "storageacconome3",
+    "storageacconome4",
+    "storageacconome5"
   ]
 }
 
