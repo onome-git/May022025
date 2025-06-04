@@ -16,3 +16,4 @@ resource "azurerm_storage_account" "mcitdevrm-v2" {
   account_replication_type = "LRS"
 }
  
+
