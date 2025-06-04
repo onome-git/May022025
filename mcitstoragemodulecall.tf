@@ -1,4 +1,4 @@
-module "mymcitstorage" {
+module "mymcitstorage_v4" {
   source              = "./module/storage_account"  
   name                = "onomestorageaccount"
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
