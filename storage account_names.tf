@@ -9,7 +9,7 @@ locals {
   ]
 }
 
-module "mcitstorage" {
+module "mymcitstorage" {
   for_each                  = toset(local.storage_account_names)
   source                    = "./modules/storage_account"
   name                      = each.key
