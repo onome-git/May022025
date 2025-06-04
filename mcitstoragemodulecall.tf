@@ -15,9 +15,3 @@ module "mymcitstorage_v4" {
 }
 
 
-
-  tags = {
-    environment = "dev"
-    team        = "infra"
-  }
-}
