@@ -13,7 +13,7 @@ module "mymcitstorage_v4" {
   }
 }
 
-module "mymcitstorage_v4.1" {
+module "mymcitstorage_v5" {
   source = "./module/storage_account"
 
   for_each = var.storage_accounts  # Loops over the map to create 4 storage accounts
