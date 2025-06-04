@@ -11,7 +11,7 @@ locals {
 
 module "mymcitstorage_v3" {
   for_each                  = toset(local.storage_account_names)
-  source                    = "./module/storage_account"
+  source                    = "./modules/storage_account"
   name                      = each.key
   resource_group_name       = azurerm_resource_group.mcit420zz5um.name
   location                  = azurerm_resource_group.mcit420zz5um.location
