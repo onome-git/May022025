@@ -24,7 +24,6 @@ module "onomeforeachmcitstorage" {
   location            = azurerm_resource_group.mcit420zz5um.location
   account_tier        = "Standard"
   account_replication_type = "LRS"
-  kind                = "StorageV2"
   access_tier         = "Hot"
   tags = {
     environment = "dev"
