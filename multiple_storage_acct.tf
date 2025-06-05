@@ -39,7 +39,7 @@ locals {
   }
 }
 
-module "mymcitstorage_unique" {
+module "mymcitstorage {
   for_each = local.storage_accounts
 
   source                    = "./modules/storage_account"
