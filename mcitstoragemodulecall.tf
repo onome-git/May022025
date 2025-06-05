@@ -17,7 +17,7 @@ module "mymcitstorage" {
 
 
 
-module "myforeachmcitstorage" {
+module "onomeforeachmcitstorage" {
   source              = "./modules/storage_account"
   name                = "samistorageacc12345"
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
