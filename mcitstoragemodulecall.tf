@@ -1,7 +1,7 @@
 locals {
   storage_accounts = {
     sa1 = {
-      name                     = "onomestorageacct"
+      name                     = "onomestorageacct1"
       account_tier             = "Standard"
       account_replication_type = "LRS"
       kind                     = "StorageV2"
@@ -36,7 +36,7 @@ module "mymcitstorage" {
 
 module "myforeachmcitstorage" {
   source              = "./modules/storage_account"
-  name                = "onomestorageacct"
+  name                = "onomestorageacct3"
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
   location            = azurerm_resource_group.mcit420zz5um.location
   account_tier        = "Standard"
