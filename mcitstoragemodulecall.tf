@@ -1,4 +1,4 @@
-ocals {
+locals {
   storage_accounts = {
     sa1 = {
       name                     = "onomestorageacct"
