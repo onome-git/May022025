@@ -25,11 +25,6 @@ variable "account_replication_type" {
   default     = "LRS"
 }
 
-variable "kind" {
-  description = "The kind of storage account."
-  type        = string
-  default     = "StorageV2"
-}
 
 variable "access_tier" {
   description = "Defines the access tier (Hot or Cool)."
