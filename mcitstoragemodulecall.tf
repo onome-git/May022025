@@ -1,4 +1,4 @@
-module "mymcitstorage_v4" {
+module "mymcitstorage" {
   source = "./modules/storage_account" 
   
   name                    = "onomestorageacct4"
