@@ -7,7 +7,6 @@ module "mymcitstorage" {
   location            = azurerm_resource_group.mcit420zz5um.location
   account_tier        = each.value.account_tier
   account_replication_type = each.value.account_replication_type
-  kind                = each.value.kind
   access_tier         = each.value.access_tier
   tags = {
     environment = "dev"
