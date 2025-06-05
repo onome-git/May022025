@@ -58,3 +58,14 @@ resource "azurerm_resource_group" "mcit420zz5um" {
   location = "Canada Central" 
 }
 
+resource "azurerm_storage_account" "this" {
+  name                     = var.name
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
+  account_tier             = var.account_tier
+  account_replication_type = var.account_replication_type
+  kind                     = var.kind
+  access_tier              = var.access_tier
+
+  tags = var.tags
+}
