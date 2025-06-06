@@ -1,7 +1,7 @@
 module "mymcitstorage_group1" {
   for_each = local.storage_accounts
 
-  source              = "./modules/storage_account_group1"
+  source              = "./module/storage_account"
   name                = each.value.name
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
   location            = azurerm_resource_group.mcit420zz5um.location
@@ -14,11 +14,8 @@ module "mymcitstorage_group1" {
   }
 }
 
-
-
-
 module "onomeforeachmcitstorage" {
-  source              = "./modules/storage_account_group1"
+  source              = "./module/storage_account"
   name                = "onomestorageacctstatic"
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
   location            = azurerm_resource_group.mcit420zz5um.location
