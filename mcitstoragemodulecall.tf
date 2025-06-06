@@ -1,7 +1,7 @@
 module "mymcitstorage_group1" {
   for_each = local.storage_accounts
 
-  source              = "./module/storage_account"
+  source              = "./module/storage_account" # this calls the module in main.tf👌
   name                = each.value.name
   resource_group_name = azurerm_resource_group.mcit420zz5um.name
   location            = azurerm_resource_group.mcit420zz5um.location
