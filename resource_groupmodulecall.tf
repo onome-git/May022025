@@ -1,5 +1,5 @@
 
-module "resource_group1" {
+module "resource_group" {
   for_each = var.resource_groups
 
   source   = "./modules/resource_group"
