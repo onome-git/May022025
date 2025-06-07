@@ -1,5 +1,5 @@
 locals {
-  resource_groups = {
+    multiple_resource_groups = {
     rg-onome-eastus   = "eastus"
     rg-onome-westus   = "westus"
     rg-onome-central  = "centralus"
