@@ -9,7 +9,7 @@ locals {
 }
 
 module "resource_groups" {
-  for_each = local.resource_group
+  for_each = local.resource_groups
 
   source   = "./modules/resource_group"
   name     = each.key
