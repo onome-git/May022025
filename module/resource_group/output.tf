@@ -1,13 +1,6 @@
-variable "name" {
-  description = "The name of the storage account."
-  type        = string
+output "name" {
+  value = azurerm_resource_group.snpp2025.name
 }
 
-variable "resource_group_name" {
-  description = "The name of the resource group."
-  type        = string
-}
-
-variable "location" {
-  description = "Azure region where the storage account will be created."
-  type        = string
+output "location" {
+  value = azurerm_resource_group.snpp2025.location
