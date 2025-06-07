@@ -13,7 +13,7 @@ locals {
 module "resource_groups" {
   for_each = local.resource_groups
 
-  source   = "./modules/resource_group"
+  source   = "./module/resource_group"
   name     = each.key
   location = each.value
 
