@@ -8,7 +8,7 @@ locals {
   }
 }
 
-module "resource_groups" {
+module "resource_groups2" {
   for_each = local.resource_group
 
   source   = "./modules/resource_group"
