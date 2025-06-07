@@ -1,4 +1,4 @@
-resource "resource_group" ""mcitdevrm"" {
+resource "resource_group" "onomespmay022025" {
   name                     = var.name
   resource_group_name      = var.resource_group_name
   location                 = var.location
