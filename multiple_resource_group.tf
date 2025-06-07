@@ -1,6 +1,6 @@
 
 locals {
-  multipleresource_groups = {
+  resource_groups = {
     rg-onome-eastus     = "eastus"
     rg-onome-westus     = "westus"
     rg-onome-central    = "centralus"
@@ -9,8 +9,8 @@ locals {
   }
 }
 
-module "multiple_resource_groups" {
-  for_each = local.multipleresource_groups
+module "resource_groups" {
+  for_each = local.resource_groups
 
   source   = "./modules/resource_group"
   name     = each.key
