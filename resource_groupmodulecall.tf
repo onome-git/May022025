@@ -8,3 +8,4 @@ module "single_resource_group" {
     team        = "infra"
   }
 }
+
