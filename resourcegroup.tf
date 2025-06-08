@@ -21,7 +21,7 @@ resource "azurerm_virtual_network" "example2" {
   name                = "example2-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = "East US"
-  resource_group_name = "example2-rg"
+  resource_group_name = "example2-onomerg2025"
 }
 
 resource "azurerm_subnet" "subnets" {
@@ -33,7 +33,7 @@ resource "azurerm_subnet" "subnets" {
   address_prefixes     = [each.value]
 }
 
-resource "azurerm_resource_group" "rg" {
+resource "azurerm_resource_group" "onomerg2025" {
   name     = "example-resources"
   location = "eastus"
 }
@@ -41,8 +41,8 @@ resource "azurerm_resource_group" "rg" {
 resource "azurerm_virtual_network" "vnet" {
   name                = "example-vnet"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.onomerg2025.location
+  resource_group_name = azurerm_resource_group.onomerg2025.name
 }
 
 resource "azurerm_subnet" "subnet" {
@@ -50,7 +50,7 @@ resource "azurerm_subnet" "subnet" {
   name                 = each.key
   address_prefixes     = [each.value]
   virtual_network_name = azurerm_virtual_network.vnet.name
-  resource_group_name  = azurerm_resource_group.rg.name
+  resource_group_name  = azurerm_resource_group.onomerg2025.name
 }
 
 resource "azurerm_resource_group" "mcit420zz5um" {
