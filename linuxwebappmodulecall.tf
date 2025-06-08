@@ -13,8 +13,8 @@ module "linux_web_app" {
   source              = "./module/linux_web_app"
 
   name                = each.key
-  location            = azurerm_resource_group.onometerraform.location
-  resource_group_name = azurerm_resource_group.onometerraform.name
+  location            = azurerm_resource_group.onomerg2025.location
+  resource_group_name = azurerm_resource_group.onomerg2025.name
 
   service_plan_name     = "mcit-app-service-plan"
   service_plan_sku_name = "B1"  # Example values: B1, S1, P1v3, EP1, etc.
