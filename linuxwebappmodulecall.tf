@@ -10,7 +10,7 @@ locals {
 
 module "linux_web_app" {
   for_each            = local.linux_web_apps
-  source              = "./modules/linux_web_app"
+  source              = "./module/linux_web_app"
 
   name                = each.key
   location            = azurerm_resource_group.onometerraform.location
